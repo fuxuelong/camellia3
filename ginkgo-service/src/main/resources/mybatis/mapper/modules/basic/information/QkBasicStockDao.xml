@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qk.ginkgoservice.modules.basic.information.dao.QkBasicStockDao">
+
+    <sql id="qkBasicStockColumns">
+		a.id AS "id",
+		a.stockcode AS "stockcode",
+		a.stockname AS "stockname",
+		a.stocktype AS "stocktype",
+		a.jxsid AS "office.id",
+		a.stockaddress AS "stockaddress",
+		a.areaid AS "areaid",
+		a.dj AS "dj",
+		a.bw AS "bw",
+		a.fzrid AS "fzrid",
+		a.sldate AS "sldate",
+		a.active AS "active",
+		a.canjc AS "canjc",
+		a.jcrsqs AS "jcrsqs",
+		a.jczbab AS "jczbab",
+		a.sqsdqdate AS "sqsdqdate",
+		a.lxr AS "lxr",
+		a.lxrdh AS "lxrdh",
+		a.lxrcz AS "lxrcz",
+		a.lxremail AS "lxremail",
+		a.website AS "website",
+		a.address AS "address",
+		a.yb AS "yb",
+		a.idcard AS "idcard",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag",
+		u.name AS "createBy.name",
+		o.id AS "office.id",
+		o.name AS "office.name",
+    	o.parent_id AS "office.parent.id",
+    	o.parent_ids AS "office.parentIds",
+    	jxs.px AS "jxspxid"
+	</sql>
+
+    <sql id="qkBasicStockJoins">
+	LEFT JOIN sys_user u ON u.id = a.update_by
+	LEFT JOIN sys_office o ON o.id = a.jxsid
+	LEFT JOIN sys_office o1 ON o1.id = u.office_id
+	LEFT JOIN qk_basic_jxsinfo jxs ON o.id = jxs.officeid AND jxs.active = '1'
+	</sql>
+
+    <select id="findStockList" resultType="com.qk.ginkgoservice.modules.basic.information.entity.QkBasicStock">
+        SELECT
+        <include refid="qkBasicStockColumns"/>
+        FROM qk_basic_stock a
+        <include refid="qkBasicStockJoins"/>
+        <where>
+            a.del_flag = #{DEL_FLAG_NORMAL}
+            <if test="stockcode != null and stockcode != ''">
+                AND a.stockcode LIKE concat('%',#{stockcode},'%')
+            </if>
+            <if test="stockname != null and stockname != ''">
+                AND a.stockname LIKE concat('%',#{stockname},'%')
+            </if>
+            <if test="stocktype != null and stocktype != ''">
+                AND a.stocktype = #{stocktype}
+            </if>
+            <if test="areaid != null and areaid != ''">
+                AND a.areaid = #{areaid}
+            </if>
+            <if test="office != null and office.id!= null and office.id != ''">
+                AND (o.id = #{office.id} OR o.parent_ids LIKE CONCAT('%,', #{office.id}, ',%'))
+            </if>
+            <if test="beginSldate != null and endSldate != null and beginSldate != '' and endSldate != ''">
+                AND a.sldate BETWEEN #{beginSldate} AND #{endSldate}
+            </if>
+
+            <if test="active != null and active != ''">
+                AND a.active = #{active}
+            </if>
+            <!-- 数据范围过滤 -->
+            ${sqlMap.dsf}
+        </where>
+           ORDER BY a.update_date DESC
+    </select>
+
+    <select id="getByStockCode" resultType="com.qk.ginkgoservice.modules.basic.information.entity.QkBasicStock">
+      SELECT
+        stockname AS stockname
+      FROM qk_basic_stock a
+      where stockcode = #{stockcode}
+    </select>
+	<!--插入新数据-->
+	<insert id="insert">
+		INSERT INTO qk_basic_stock(
+			id,
+			stockcode,
+			stockname,
+			stocktype,
+			jxsid,
+			stockaddress,
+			areaid,
+			dj,
+			bw,
+			fzrid,
+			sldate,
+			active,
+			canjc,
+			jcrsqs,
+			jczbab,
+			sqsdqdate,
+			lxr,
+			lxrdh,
+			lxrcz,
+			lxremail,
+			website,
+			address,
+			yb,
+			idcard,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag
+		) VALUES (
+			#{id},
+			#{stockcode},
+			#{stockname},
+			#{stocktype},
+			#{office.id},
+			#{stockaddress},
+			#{areaid},
+			#{dj},
+			#{bw},
+			#{fzrid},
+			#{sldate},
+			#{active},
+			#{canjc},
+			#{jcrsqs},
+			#{jczbab},
+			#{sqsdqdate},
+			#{lxr},
+			#{lxrdh},
+			#{lxrcz},
+			#{lxremail},
+			#{website},
+			#{address},
+			#{yb},
+			#{idcard},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag}
+		)
+	</insert>
+	<!--更新数据-->
+	<update id="update">
+		UPDATE qk_basic_stock SET
+			stockcode = #{stockcode},
+			stockname = #{stockname},
+			stocktype = #{stocktype},
+			jxsid = #{office.id},
+			stockaddress = #{stockaddress},
+			areaid = #{areaid},
+			dj = #{dj},
+			bw = #{bw},
+			fzrid = #{fzrid},
+			sldate = #{sldate},
+			active = #{active},
+			canjc = #{canjc},
+			jcrsqs = #{jcrsqs},
+			jczbab = #{jczbab},
+			sqsdqdate = #{sqsdqdate},
+			lxr = #{lxr},
+			lxrdh = #{lxrdh},
+			lxrcz = #{lxrcz},
+			lxremail = #{lxremail},
+			website = #{website},
+			address = #{address},
+			yb = #{yb},
+			idcard = #{idcard},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks}
+		WHERE id = #{id}
+	</update>
+
+</mapper>

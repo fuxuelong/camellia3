@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: log-server
+  cloud:
+    config:
+      uri: http://localhost:7011,http://localhost:7012
+      fail-fast: true
+      name: log
+      profile: dev
+#      discovery:
+#        enabled: true
+#        service-id: config-server

@@ -1,0 +1,14 @@
+server:
+  port: 9998
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://222.175.129.7:3306/qkbmis20180601?useUnicode=true&charecterEncoding=utf8&characterSetResult=utf8&useSSL=false
+    username: bmisAdmin
+    password: Qkxs@formal_
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+  type-aliases-package: com.qk.uaaginkgoappserver.entity                  # 所有Entity别名类所在包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml

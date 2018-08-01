@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qk.logserver.dao.LogDao">
+
+    <sql id="logColumns">
+        a.id AS "id",
+        a.username AS "username",
+        a.operation AS "operation",
+        a.method AS "method",
+        a.params AS "params",
+        a.ip AS "ip",
+        a.create_date AS "createDate"
+      </sql>
+
+
+    <insert id="save">
+        insert into sys_log (username,operation,method,params,ip,create_date)
+        values (#{username},#{operation},#{method},#{params},#{ip},#{createDate})
+     </insert>
+</mapper>

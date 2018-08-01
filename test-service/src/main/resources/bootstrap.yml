@@ -1,0 +1,20 @@
+
+spring:
+  application:
+    name: test-service
+  cloud:
+    config:
+      profile: dev
+      name: test
+      uri: http://localhost:7011,http://localhost:7012
+#      discovery:
+#        enabled: true
+#        service-id: config-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+

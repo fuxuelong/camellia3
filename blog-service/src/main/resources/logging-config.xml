@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--scan  当此属性设置为true时，配置文件如果发生改变，将会被重新加载，默认值为true。-->
+<configuration  scan="true" scanPeriod="60 seconds" debug="false">
+    <contextName>logback</contextName>
+    <property name="log.path" value="d:/log" />
+    <!--输出到控制台-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+             <level>ERROR</level>
+         </filter>-->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--输出到文件-->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.path}/logback.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--用来指定最基础的日志输出级别， -->
+    <root level="info">
+        <appender-ref ref="console" />
+    </root>
+
+    <!--<logger>用来设置某一个包或者具体的某一个类的日志打印级别、以及指定<appender> -->
+    <!--将控制controller包下的所有类的日志的打印，但是并没用设置打印级别，
+    所以继承他的上级(root)的日志级别“info”；
+    没有设置addtivity，默认为true，将此logger的打印信息向上级传递；
+    没有设置appender，此logger本身不打印任何信息。-->
+    <logger name="com.example.springboot.controller"/>
+    <!--logback.LogbackDemo：类的全路径 -->
+    <!--addtivity:是否向上级logger传递打印信息。默认是true-->
+    <!--<logger name="com.example.springboot.controller" level="info" additivity="false">-->
+        <!--<appender-ref ref="console"/>-->
+    <!--</logger>-->
+
+    <logger name="com.qk.blogservice.dao" level="debug" additivity="false">
+        <appender-ref ref="console"/>
+    </logger>
+
+
+    <!--不同环境下打印日志的级别不同-->
+
+    <!--测试、开发环境-->
+    <!--<springProfile name="test,dev">-->
+        <!--&lt;!&ndash;使用mybatis的时候，打印sql语句，将dao层下的所有class的日志级别设为debug&ndash;&gt;-->
+        <!--<logger name="com.demo.dao" level="DEBUG" additivity="false">-->
+            <!--<appender-ref ref="console" />-->
+        <!--</logger>-->
+    <!--</springProfile>-->
+    <!--&lt;!&ndash; 生产环境. &ndash;&gt;-->
+    <!--<springProfile name="prod">-->
+        <!--<logger name="com.demo" level="ERROR" />-->
+    <!--</springProfile>-->
+</configuration>

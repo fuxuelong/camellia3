@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qk.ginkgoservice.modules.basic.crm.dao.QkBasicJxsinfoDao">
+    
+	<sql id="qkBasicJxsinfoColumns">
+		a.id AS "id",
+		a.jxscode AS "jxscode",		
+		a.officeid AS "officejxs.id",
+		a.bscid AS "office.id",
+		a.name AS "name",
+		a.jxsjc AS "jxsjc",
+		a.address AS "address",
+		a.pid AS "pid",
+		a.grade AS "grade",
+		a.zzjgdm AS "zzjgdm",
+		a.khyh AS "khyh",
+		a.yhzh AS "yhzh",
+		a.yyzzdjh AS "yyzzdjh",
+		a.gssh AS "gssh",
+		a.shdjzh AS "shdjzh",			
+		a.gsxz AS "gsxz",
+		a.frdb AS "frdb",
+		a.frdh AS "frdh",
+		a.frcz AS "frcz",
+		a.zczj AS "zczj",
+		a.regdate AS "regdate",
+		a.yb AS "yb",
+		a.gsrs AS "gsrs",
+		a.qtjypp AS "qtjypp",
+		a.zyys AS "zyys",
+		a.dwxz AS "dwxz",
+		a.isxfyt AS "isxfyt",
+		a.fwzname AS "fwzname",
+		a.last1styearqkxl AS "last1styearqkxl",
+		a.last2ndyearqkxl AS "last2ndyearqkxl",
+		a.last3rdyearqkxl AS "last3rdyearqkxl",
+		a.last1styearxl AS "last1styearxl",
+		a.last2ndyearxl AS "last2ndyearxl",
+		a.last3rdyearxl AS "last3rdyearxl",
+		
+		a.lxrid AS "lxrid",
+		a.lxrdh AS "lxrdh",
+		a.lxrcz AS "lxrcz",		
+		a.jycsxz AS "jycsxz",
+		a.jycsmj AS "jycsmj",
+		a.email AS "email",		
+		a.ywrys AS "ywrys",		
+		a.ywfzr AS "ywfzr",
+		a.ywrdh AS "ywrdh",
+		a.ywcz AS "ywcz",
+		a.jxqy AS "jxqy",
+		a.cxl AS "cxl",
+		a.rwdate AS "rwdate",
+		a.category As "category.id",
+    	a.px As "px.id",
+		a.scb_flag AS "scbFlag",
+		a.scb_text AS "scb_text",
+		a.fsb_flag AS "fsbFlag",
+		a.fsb_text AS "fsb_text",
+		a.cwb_flag AS "cwbFlag",
+		a.cwb_text AS "cwb_text",		
+		a.jsb_flag AS "jsbFlag",
+		a.xgb_flag AS "xgbFlag",
+		a.fwb_flag AS "fwbFlag",
+		a.lead_flag AS "leadFlag",		
+		a.jsb_text AS "jsb_text",
+		a.xgb_text AS "xgb_text",
+		a.fwb_text AS "fwb_text",
+		a.lead_text AS "lead_text",
+		a.scb_date AS "scb_date",
+		a.fsb_date AS "fsb_date",
+		a.cwb_date AS "cwb_date",
+		a.jsb_date AS "jsb_date",
+		a.xgb_date AS "xgb_date",
+		a.fwb_date AS "fwb_date",
+		a.lead_date AS "lead_date",
+		a.active AS "active",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.bg_by AS "bgBy.id",
+		a.bg_date AS "bgDate",
+		a.bg_remarks AS "bgRemarks",
+		a.file AS "file",
+		a.del_flag AS "delFlag",
+		a.spzt AS "spzt",
+		a.parent_id AS "parent.id",
+		o.name AS "office.name",
+    	o.parent_id AS "office.parent.id",
+    	o.parent_ids AS "office.parentIds",
+    	o.category AS "office.category", 
+    	o.code AS "office.code",
+		u.name AS "createBy.name",	   	
+    	px.name AS "px.name", 
+    	category.name AS "category.name",
+    	o1.name AS "officejxs.name",
+    	p.name AS "parent.name",
+    	(select count(*) from qk_basic_jxsinfo where del_flag = '0' and parent_id is not null and (spzt = 4  or spzt = 1) and parent_id = a.id) AS "spSize",  
+    	p.jxsjc AS "parent.jxsjc",
+	    p.dwxz AS "parent.dwxz",
+	    p.isxfyt AS "parent.isxfyt",
+	    p.zzjgdm AS "parent.zzjgdm" ,
+	    a.province AS "province",
+	    a.city AS "city",
+	    area.name AS "cityName",
+	    area1.name AS "provinceName",
+	    
+	    a.jxstype AS "jxstype",
+		a.areatype AS "areatype",
+		a.workeddate AS "workeddate",
+		a.citygrade AS "citygrade"
+	   
+	</sql>
+	
+	<sql id="qkBasicJxsinfoJoins">
+	LEFT JOIN sys_office o ON o.id = cast(a.bscid as char(64))
+	LEFT JOIN sys_user u ON u.id = a.create_by
+	LEFT JOIN sys_office o1 ON o1.id = cast(a.officeid as char(64))	
+	left join sys_area area on area.id = a.city
+	LEFT JOIN qk_basic_pp category ON category.id = a.category
+	LEFT JOIN qk_basic_pp px ON px.id = a.px
+	LEFT JOIN qk_basic_jxsinfo p ON p.id = a.parent_id
+	<!-- left join qk_basic_jxsgl jxsgl on jxsgl.jxsid = a.id -->
+	LEFT JOIN sys_office bsc on bsc.id = a.bscid
+	LEFT JOIN sys_area area1 on area1.id = a.province
+	</sql>
+    
+	<select id="get" resultType="QkBasicJxsinfo">
+		SELECT 
+			<include refid="qkBasicJxsinfoColumns"/>
+		FROM qk_basic_jxsinfo a
+		<include refid="qkBasicJxsinfoJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	
+	<!-- 经销商编码自动生成 -->
+	<select id="getByBsc" resultType="QkBasicJxsinfo">
+		SELECT
+			<include refid="qkBasicJxsinfoColumns"/>
+		FROM qk_basic_jxsinfo a
+		<include refid="qkBasicJxsinfoJoins"/>
+		<where>
+			a.parent_id is null
+			<if test="office != null and office.id != null  and office.id != ''">
+				and o.id = #{office.id}
+		    </if>
+		    <if test="active != null  and active != ''">
+				and a.active = #{active}
+		    </if>
+		    <if test="spzt != null  and spzt != ''">
+				and a.spzt = #{spzt}
+		    </if>
+		</where>
+		order by a.jxscode
+	</select>
+
+
+
+
+ 	<select id="findList" resultType="QkBasicJxsinfo">
+		SELECT
+			<include refid="qkBasicJxsinfoColumns"/>
+		FROM qk_basic_jxsinfo a
+		<include refid="qkBasicJxsinfoJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="jxscode != null and jxscode != ''">
+				AND a.jxscode like concat('%',#{jxscode},'%')
+			</if>
+			<if test="office != null and office.id != null  and office.id != ''">
+				AND o.id = #{office.id}
+		    </if>
+		    <if test="officejxs != null and officejxs.id != null and officejxs.id != ''">
+				AND a.officeid = #{officejxs.id}
+		    </if>
+			<if test="name != null and name != ''">
+				AND a.name LIKE concat('%',#{name},'%')
+			</if>
+			<if test="isxfyt != null and isxfyt != ''">
+				AND a.isxfyt = #{isxfyt}
+			</if>
+			<if test="spzt != null and spzt != ''">
+				AND a.spzt = #{spzt}
+			</if>
+			<if test="active != null and active != ''">
+				AND a.active = #{active}
+			</if>
+			<if test="dwxz != null and dwxz != ''">
+				AND a.dwxz = #{dwxz}
+			</if>
+			<if test="px != null and px.id != null  and px.id != ''">
+				AND a.px LIKE concat('%',#{px.id},'%')
+		    </if>
+		    <if test="province != null and province != ''">
+				and area1.id = #{province}
+		    </if>
+		    <if test="city != null and city != ''">
+				and area.id = #{city}
+		    </if>
+
+			${sqlStr}
+		<!-- 数据范围过滤 -->
+		${sqlMap.dsf}
+		</where>
+			ORDER BY a.update_date DESC
+	</select>
+
+
+	<select id="findAllList" resultType="QkBasicJxsinfo">
+		SELECT
+			<include refid="qkBasicJxsinfoColumns"/>
+		FROM qk_basic_jxsinfo a
+		<include refid="qkBasicJxsinfoJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+
+	<!-- HOWOapp查询附近经销商时使用 -->
+	<select id="findjxsInfo" resultType="Map">
+		SELECT
+			a.id AS "id",
+			a.name AS "name",
+			province.name AS "province",
+			city.name AS "city",
+			ifnull(a.address,'') AS "address",
+			ifnull(ifnull(a.ywrdh,a.lxrdh),' ') AS "tel"
+
+		FROM qk_basic_jxsinfo a
+		LEFT JOIN sys_area province ON province.id = a.province
+		LEFT JOIN sys_area city ON city.id = a.city
+		LEFT JOIN sys_office o ON a.bscid = o.id
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL} AND a.parent_id IS NOT NULL
+			AND o.code != 'CK' AND o.code != 'XG'<!-- 将销管和进出口排除在外 -->
+			<if test="px != null and px.id != null  and px.id != ''">
+				AND a.px LIKE concat('%',#{px.id},'%')
+		    </if>
+		    <if test="province != null and province != ''">
+				and province.id = #{province}
+		    </if>
+		    <if test="city != null and city != ''">
+				and city.id = #{city}
+		    </if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	<!-- HOWOapp查询经销商信息-->
+	<select id="getJxsinfo" resultType="Map">
+		SELECT
+			a.name AS "name",
+			province.name AS "province",
+			city.name AS "city",
+			ifnull(a.address,'') AS "address",
+			ifnull(ifnull(a.ywrdh,a.lxrdh),' ') AS "tel"
+
+		FROM qk_basic_jxsinfo a
+		LEFT JOIN sys_area province ON province.id = a.province
+		LEFT JOIN sys_area city ON city.id = a.city
+		LEFT JOIN sys_office o ON a.bscid = o.id
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL} AND a.parent_id IS NOT NULL
+			AND o.code != 'CK' AND o.code != 'XG'<!-- 将销管和进出口排除在外 -->
+		    <if test="id != null and id != ''">
+				and a.id = #{id}
+		    </if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+
+
+	<insert id="insert">
+		INSERT INTO qk_basic_jxsinfo(
+			id,
+			jxscode,
+			bscid,
+			name,
+			jxsjc,
+			address,
+			yb,
+			zzjgdm,
+			khyh,
+			yhzh,
+			yyzzdjh,
+			gssh,
+			shdjzh,
+			gsxz,
+			frdb,
+			frdh,
+			frcz,
+			zczj,
+			regdate,
+			grade,
+			gsrs,
+			qtjypp,
+			dwxz,
+			isxfyt,
+			fwzname,
+			last1styearqkxl,
+			last2ndyearqkxl,
+			last3rdyearqkxl,
+			last1styearxl,
+			last2ndyearxl,
+			last3rdyearxl,
+			zyys,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag,
+			spzt,
+			active,
+			px,
+			category,
+			city,
+			province,
+			jxstype,
+			areatype,
+			workeddate,
+			citygrade
+		) VALUES (
+			#{id},
+			#{jxscode},
+			#{office.id},
+			#{name},
+			#{jxsjc},
+			#{address},
+			#{yb},
+			#{zzjgdm},
+			#{khyh},
+			#{yhzh},
+			#{yyzzdjh},
+			#{gssh},
+			#{shdjzh},
+			#{gsxz},
+			#{frdb},
+			#{frdh},
+			#{frcz},
+			#{zczj},
+			#{regdate},
+			#{grade},
+			#{gsrs},
+			#{qtjypp},
+			#{dwxz},
+			#{isxfyt},
+			#{fwzname},
+			#{last1styearqkxl},
+			#{last2ndyearqkxl},
+			#{last3rdyearqkxl},
+			#{last1styearxl},
+			#{last2ndyearxl},
+			#{last3rdyearxl},
+			#{zyys},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag},
+			#{spzt},
+			#{active},
+			#{px.id},
+			#{category.id},
+			#{city},
+			#{province},
+			#{jxstype},
+			#{areatype},
+			#{workeddate},
+			#{citygrade}
+			)
+	</insert>
+
+
+
+	<update id="update">
+		UPDATE qk_basic_jxsinfo SET
+			officeid = #{officejxs.id},
+			bscid=#{office.id},
+			name = #{name},
+			jxsjc = #{jxsjc},
+			address = #{address},
+			yb = #{yb},
+			zzjgdm = #{zzjgdm},
+			khyh = #{khyh},
+			yhzh = #{yhzh},
+			yyzzdjh = #{yyzzdjh},
+			gssh = #{gssh},
+			shdjzh = #{shdjzh},
+			gsxz = #{gsxz},
+			frdb = #{frdb},
+			frdh = #{frdh},
+			frcz = #{frcz},
+			zczj = #{zczj},
+			regdate = #{regdate},
+			grade = #{grade},
+			gsrs = #{gsrs},
+			qtjypp = #{qtjypp},
+			dwxz = #{dwxz},
+			isxfyt = #{isxfyt},
+			fwzname = #{fwzname},
+			last1styearqkxl = #{last1styearqkxl},
+			last2ndyearqkxl = #{last2ndyearqkxl},
+			last3rdyearqkxl = #{last3rdyearqkxl},
+			last1styearxl = #{last1styearxl},
+			last2ndyearxl = #{last2ndyearxl},
+			last3rdyearxl = #{last3rdyearxl},
+			zyys = #{zyys},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks},
+			px = #{px.id},
+			category = #{category.id},
+			spzt = #{spzt},
+			active = #{active},
+			city = #{city},
+			province = #{province},
+			jxstype = #{jxstype},
+			areatype = #{areatype},
+			workeddate = #{workeddate},
+			citygrade= #{citygrade}
+		WHERE id = #{id}
+	</update>
+
+
+
+	<update id="updateJxsSpzt">
+		UPDATE qk_basic_jxsinfo SET
+			spzt = #{spzt},
+			bsc_flag = #{bscFlag},
+			bsc_text = #{bscText},
+			bsc_date = #{bscDate},
+			scb_flag = #{scbFlag},
+			scb_text = #{scbText},
+			scb_date = #{scbDate},
+			fsb_flag = #{fsbFlag},
+			fsb_text = #{fsbText},
+			fsb_date = #{fsbDate},
+			cwb_flag = #{cwbFlag},
+			cwb_text = #{cwbText},
+			cwb_date = #{cwbDate},
+			jsb_flag = #{jsbFlag},
+			jsb_text = #{jsbText},
+			jsb_date = #{jsbDate},
+			xgb_Flag = #{xgbFlag},
+			xgb_text = #{xgbText},
+			xgb_date = #{xgbDate},
+			fwb_flag = #{fwbFlag},
+			fwb_text = #{fwbText},
+			fwb_date = #{fwbDate},
+			lead_flag = #{leadFlag},
+			lead_text = #{leadText},
+			lead_date = #{leadDate},
+			workeddate = #{workeddate}
+			WHERE id = #{id}
+	</update>
+
+
+	<update id="updateBG">
+		UPDATE qk_basic_jxsinfo SET
+			officeid = #{officejxs.id},
+			bscid=#{office.id},
+			name = #{name},
+			jxsjc = #{jxsjc},
+			address = #{address},
+			yb = #{yb},
+			zzjgdm = #{zzjgdm},
+			khyh = #{khyh},
+			yhzh = #{yhzh},
+			yyzzdjh = #{yyzzdjh},
+			gssh = #{gssh},
+			shdjzh = #{shdjzh},
+			gsxz = #{gsxz},
+			frdb = #{frdb},
+			frdh = #{frdh},
+			frcz = #{frcz},
+			zczj = #{zczj},
+			regdate = #{regdate},
+			grade = #{grade},
+			gsrs = #{gsrs},
+			qtjypp = #{qtjypp},
+			dwxz = #{dwxz},
+			isxfyt = #{isxfyt},
+			fwzname = #{fwzname},
+			last1styearqkxl = #{last1styearqkxl},
+			last2ndyearqkxl = #{last2ndyearqkxl},
+			last3rdyearqkxl = #{last3rdyearqkxl},
+			last1styearxl = #{last1styearxl},
+			last2ndyearxl = #{last2ndyearxl},
+			last3rdyearxl = #{last3rdyearxl},
+			zyys = #{zyys},
+			active = #{active},
+			bg_by = #{bgBy.id},
+			bg_date = #{bgDate},
+			bg_remarks = #{bgRemarks},
+			city = #{city},
+			province = #{province},
+			jxstype = #{jxstype},
+			areatype = #{areatype},
+			workeddate = #{workeddate},
+			citygrade= #{citygrade}
+		WHERE id = #{id}
+	</update>
+
+
+	<update id="delete">
+		UPDATE qk_basic_jxsinfo SET
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+
+	<!-- 根据经销商编码查询经销商 -->
+	<select id="getJxsByCode" resultType="QkBasicJxsinfo" parameterType="QkBasicJxsinfo">
+		SELECT
+			<include refid="qkBasicJxsinfoColumns"/>
+		FROM qk_basic_jxsinfo a
+		<include refid="qkBasicJxsinfoJoins"/>
+		WHERE a.del_flag = '0' and a.jxscode = #{jxscode} and a.active = '1'
+	</select>
+
+	<!-- 根据组织机构代码查询经销商 -->
+	<select id="getByZzjgdm" resultType="QkBasicJxsinfo" parameterType="QkBasicJxsinfo">
+		SELECT
+			<include refid="qkBasicJxsinfoColumns"/>
+		FROM qk_basic_jxsinfo a
+		<include refid="qkBasicJxsinfoJoins"/>
+		WHERE a.del_flag = #{DEL_FLAG_NORMAL} and a.parent_id is null
+		and a.zzjgdm = #{zzjgdm}
+	</select>
+
+
+	<select id="getByJxsName" resultType="QkBasicJxsinfo" parameterType="QkBasicJxsinfo">
+		SELECT
+			<include refid="qkBasicJxsinfoColumns"/>
+		FROM qk_basic_jxsinfo a
+		<include refid="qkBasicJxsinfoJoins"/>
+		WHERE a.del_flag = #{DEL_FLAG_NORMAL} and a.name = #{name} and a.parent_id is null
+	</select>
+
+
+	<delete id="deleteJxsCategory">
+		DELETE FROM qk_basic_jxs_pp WHERE jxsid = #{id}
+	</delete>
+
+	<!-- 2017/8/6查询没有维护仓库的经销商网络 -->
+	<select id="findJxsNoStock" resultType="QkBasicJxsinfo">
+		SELECT
+			<include refid="qkBasicJxsinfoColumns"/>
+		FROM qk_basic_jxsinfo a
+		<include refid="qkBasicJxsinfoJoins"/>
+		<where>
+			a.officeid NOT in (SELECT jxsid FROM qk_basic_stock where del_flag=0) AND a.parent_id IS NOT NULL
+		</where>
+
+	</select>
+
+	<select id="findNoStockList" resultType="QkBasicJxsinfo">
+		SELECT
+			<include refid="qkBasicJxsinfoColumns"/>
+		FROM qk_basic_jxsinfo a
+		<include refid="qkBasicJxsinfoJoins"/>
+
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			AND a.active='1'
+			AND a.officeid NOT in (SELECT jxsid FROM qk_basic_stock where del_flag=0) AND a.parent_id IS NOT NULL
+			<if test="jxscode != null and jxscode != ''">
+				AND a.jxscode = #{jxscode}
+			</if>
+			<if test="office != null and office.id != null  and office.id != ''">
+				AND o.id = #{office.id}
+		    </if>
+		    <if test="officejxs != null and officejxs.id != null and officejxs.id != ''">
+				AND a.officeid = #{officejxs.id}
+		    </if>
+			<if test="name != null and name != ''">
+				AND a.name LIKE concat('%',#{name},'%')
+			</if>
+			<if test="isxfyt != null and isxfyt != ''">
+				AND a.isxfyt = #{isxfyt}
+			</if>
+			<if test="spzt != null and spzt != ''">
+				AND a.spzt = #{spzt}
+			</if>
+			<if test="active != null and active != ''">
+				AND a.active = #{active}
+			</if>
+			<if test="dwxz != null and dwxz != ''">
+				AND a.dwxz = #{dwxz}
+			</if>
+
+			${sqlStr}
+		<!-- 数据范围过滤 -->
+		${sqlMap.dsf}
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+
+
+	<select id="findRwjxsByParentID" resultType="QkBasicJxsinfo" parameterType="String">
+		SELECT
+			<include refid="qkBasicJxsinfoColumns"/>
+		FROM qk_basic_jxsinfo a
+		<include refid="qkBasicJxsinfoJoins"/>
+		where a.del_flag = '0'
+			AND a.active='1'
+			and a.parent_id = #{jxsid}
+	</select>
+
+</mapper>

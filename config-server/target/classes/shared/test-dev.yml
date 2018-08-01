@@ -1,0 +1,16 @@
+server:
+  port: 7003
+
+spring:
+  sleuth:
+    web:
+      client:
+        enabled: true #打开sleuth客户端功能
+    sampler:
+      probability: 1.0 #将采样比设置为1，全部采样，默认为0.1
+    zipkin:
+      base-url: http://localhost:9411/ #指定链路追踪服务地址
+
+
+
+foo: foo1

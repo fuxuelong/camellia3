@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: admin-server
+  cloud:
+    config:
+      profile: dev
+      name: admin
+      uri: http://localhost:7011,http://localhost:7012
+#      discovery:
+#        enabled: true
+#        service-id: config-server

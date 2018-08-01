@@ -1,0 +1,1545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2ba49ba1-4d6a-42ce-9066-1b30698a5ef8" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/eureka-server/target/" />
+    <ignored path="$PROJECT_DIR$/config-server/target/" />
+    <ignored path="$PROJECT_DIR$/gateway-service/target/" />
+    <ignored path="$PROJECT_DIR$/uaa-server/target/" />
+    <ignored path="$PROJECT_DIR$/user-service/target/" />
+    <ignored path="$PROJECT_DIR$/common-service/target/" />
+    <ignored path="$PROJECT_DIR$/log-service/target/" />
+    <ignored path="$PROJECT_DIR$/logger-service/target/" />
+    <ignored path="$PROJECT_DIR$/test-service/target/" />
+    <ignored path="$PROJECT_DIR$/log-server/target/" />
+    <ignored path="$PROJECT_DIR$/admin-server/target/" />
+    <ignored path="$PROJECT_DIR$/blog-service/target/" />
+    <ignored path="$PROJECT_DIR$/monitor-service/target/" />
+    <ignored path="$PROJECT_DIR$/uaa-ginkgoapp-server/target/" />
+    <ignored path="$PROJECT_DIR$/ginkgo-service/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="camellia3" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AuthExceptionEntryPoint.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/exception/AuthExceptionEntryPoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResourceServerConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/config/ResourceServerConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="28" column="78" selection-start-line="26" selection-start-column="36" selection-end-line="29" selection-end-column="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SwaggerConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/config/SwaggerConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalMethodSecurityConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/config/GlobalMethodSecurityConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OAuth2Config.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uaa-ginkgoapp-server/src/main/java/com/qk/uaaginkgoappserver/config/OAuth2Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/dto/LoginDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-56">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JwtConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/config/JwtConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GinkgoGatewayFilterFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/qk/gatewayservice/filter/GinkgoGatewayFilterFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-279">
+              <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonExceptionHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/handler/CommonExceptionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>login</find>
+      <find>loginn</find>
+      <find>pare</find>
+      <find>findByUserName</find>
+      <find>getUserByUserName</find>
+      <find>code</find>
+      <find>getJxsByCode</find>
+      <find>getByjxsCode</find>
+      <find>getByJxsCode</find>
+      <find>id</find>
+      <find>parentId</find>
+      <find>pp</find>
+      <find>QkBasicPp</find>
+      <find>jsoni</find>
+      <find>parent</find>
+      <find>category</find>
+      <find>menu</find>
+      <find>officeList</find>
+      <find>Role</find>
+      <find>findli</find>
+      <find>loginName</find>
+      <find>Menu</find>
+      <find>username</find>
+      <find>check</find>
+      <find>instance</find>
+      <find>CONNECT_TIMEOUT</find>
+      <find>NettyDataBuffer</find>
+      <find>AuthorizationServerEndpoints</find>
+      <find>不允许访问</find>
+      <find>CredentialsExpiredException</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>userName</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/basic/information/web/QkBasicStockController.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/entity/Area.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/config/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/utils/SpringContextHolder.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/config/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/utils/UserUtils.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/basic/crm/dao/QkBasicJxsinfoDao.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/entity/Office.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/basic/crm/service/QkBasicJxsPp.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/basic/crm/service/QkBasicJxsPpService.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/basic/information/entity/QkBasicPp.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/basic/crm/entity/QkBasicJxsinfo.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/basic/crm/service/QkBasicJxsinfoService.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/entity/Menu.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/resources/mybatis/mapper/modules/basic/crm/QkBasicJxsinfoDao.xml" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/entity/Role.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/resources/mybatis/mybatis.cfg.xml" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/dao/RoleDao.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/resources/mybatis/mapper/modules/sys/RoleDao.xml" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/resources/mybatis/mapper/modules/sys/UserDao.xml" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/entity/User.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/persistence/DataEntity.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/constant/Constant.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/basic/crm/web/QkBasicJxsinfoController.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/config/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/uaa-ginkgoapp-server/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/monitor-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/log-server/src/main/java/com/qk/logserver/rabbit/Sender.java" />
+        <option value="$PROJECT_DIR$/config-server/src/main/resources/shared/application.yml" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/dto/RespDTO.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/exception/ErrorCode.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/pom.xml" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/web/SysController.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/web/UserController.java" />
+        <option value="$PROJECT_DIR$/gateway-service/pom.xml" />
+        <option value="$PROJECT_DIR$/uaa-ginkgoapp-server/src/main/java/com/qk/uaaginkgoappserver/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/gateway-service/src/main/java/com/qk/gatewayservice/filter/GinkgoGatewayFilterFactory.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/exception/aa.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/config/MerryyouJwtTokenEnhancer.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/config/MyM.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/config/CustomAccessDeniedHandler.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/exception/CustomAccessDeniedHandler.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/handler/CommonExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/handler/CustomAccessDeniedHandler.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/config/ResourceServerConfiguration.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/exception/MessageCode.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/exception/AuthExceptionEntryPoint.java" />
+        <option value="$PROJECT_DIR$/uaa-ginkgoapp-server/src/main/java/com/qk/uaaginkgoappserver/config/OAuth2Config.java" />
+        <option value="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/service/UserService.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="userSettingsFile" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gateway-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gateway-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gateway-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gateway-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ginkgo-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ginkgo-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="uaa-ginkgoapp-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="uaa-ginkgoapp-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="uaa-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gatewayservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gatewayservice" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gatewayservice" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="constant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgoservice" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="sys" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="ginkgo-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="log-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="log-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="log-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="log-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="log-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="logserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="log-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="logserver" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="monitor-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="monitor-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="monitor-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="monitor-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="uaa-ginkgoapp-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="uaa-ginkgoapp-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="uaa-ginkgoapp-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="uaa-ginkgoapp-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="uaa-ginkgoapp-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="uaaginkgoappserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="uaa-ginkgoapp-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="uaaginkgoappserver" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="camellia3" type="462c0819:PsiDirectoryNode" />
+              <item name="uaa-ginkgoapp-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.boot:spring-boot-starter-security:2.0.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.boot:spring-boot-starter-security:2.0.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-boot-starter-security-2.0.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="camellia3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.boot:spring-boot-starter-security:2.0.3.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-boot-starter-security-2.0.3.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/entity" />
+      <recent name="$PROJECT_DIR$/user-service/src/main/resources/mybatis/mapper" />
+      <recent name="$PROJECT_DIR$/user-service/src/main/resources/mybatis" />
+      <recent name="$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/dao" />
+      <recent name="$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/web" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qk.ginkgoservice.modules.basic.crm.service" />
+      <recent name="com.qk.ginkgoservice.common.config" />
+      <recent name="com.qk.ginkgoservice.common.exception" />
+      <recent name="com.qk.commonservice.exception" />
+      <recent name="com.qk.gatewayservice.filter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/entity" />
+      <recent name="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/dao" />
+      <recent name="$PROJECT_DIR$/ginkgo-service/src/main/resources/mybatis/mapper/modules/sys" />
+      <recent name="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/utils" />
+      <recent name="$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/exception" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.25326696" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.GinkgoServiceApplication">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="AdminServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="admin-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.adminserver.AdminServerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
+    <configuration name="BlogServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="blog-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qk.blogservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.blogservice.BlogServiceApplication" />
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.configserver.ConfigServerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="server.port" />
+          <option name="value" value="7011" />
+        </param>
+      </additionalParameters>
+    </configuration>
+    <configuration name="ConfigServerApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.configserver.ConfigServerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="server.port" />
+          <option name="value" value="7012" />
+        </param>
+      </additionalParameters>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.eurekaserver.EurekaServerApplication" />
+      <option name="ACTIVE_PROFILES" value="eureka-server7001" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="server.port" />
+          <option name="value" value="7001" />
+        </param>
+      </additionalParameters>
+    </configuration>
+    <configuration name="EurekaServerApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.eurekaserver.EurekaServerApplication" />
+      <option name="ACTIVE_PROFILES" value="eureka-server7002" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="server.port" />
+          <option name="value" value="7002" />
+        </param>
+      </additionalParameters>
+    </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.gatewayservice.GatewayServiceApplication" />
+    </configuration>
+    <configuration name="GinkgoServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ginkgo-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.ginkgoservice.GinkgoServiceApplication" />
+    </configuration>
+    <configuration name="LogServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="log-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.logserver.LogServerApplication" />
+    </configuration>
+    <configuration name="MonitorServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="monitor-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.monitorservice.MonitorServiceApplication" />
+    </configuration>
+    <configuration name="TestServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="test-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.testservice.TestServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+    </configuration>
+    <configuration name="UaaGinkgoappServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="uaa-ginkgoapp-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.uaaginkgoappserver.UaaGinkgoappServerApplication" />
+    </configuration>
+    <configuration name="UaaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="uaa-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.uaaserver.UaaServerApplication" />
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qk.userservice.UserServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.EurekaServerApplication" />
+      <item itemvalue="Spring Boot.EurekaServerApplication2" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
+      <item itemvalue="Spring Boot.AdminServerApplication" />
+      <item itemvalue="Spring Boot.ConfigServerApplication2" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.UaaServerApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+      <item itemvalue="Spring Boot.TestServiceApplication" />
+      <item itemvalue="Spring Boot.LogServerApplication" />
+      <item itemvalue="Spring Boot.MonitorServiceApplication" />
+      <item itemvalue="Spring Boot.UaaGinkgoappServerApplication" />
+      <item itemvalue="Spring Boot.GinkgoServiceApplication" />
+      <item itemvalue="Spring Boot.BlogServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.BlogServiceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2ba49ba1-4d6a-42ce-9066-1b30698a5ef8" name="Default" comment="" />
+      <created>1531553577604</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1531553577604</updated>
+      <workItem from="1531553586773" duration="15201000" />
+      <workItem from="1531569825070" duration="30354000" />
+      <workItem from="1531730044194" duration="5317000" />
+      <workItem from="1531742943725" duration="306000" />
+      <workItem from="1531743891748" duration="8507000" />
+      <workItem from="1531816323243" duration="5000" />
+      <workItem from="1531816380270" duration="383000" />
+      <workItem from="1531816933574" duration="136000" />
+      <workItem from="1531817106977" duration="240000" />
+      <workItem from="1531817473195" duration="409000" />
+      <workItem from="1531817970099" duration="1663000" />
+      <workItem from="1531820089004" duration="58137000" />
+      <workItem from="1532004973335" duration="7755000" />
+      <workItem from="1532054931872" duration="21473000" />
+      <workItem from="1532229296735" duration="8000" />
+      <workItem from="1532230165119" duration="21256000" />
+      <workItem from="1532323513645" duration="20076000" />
+      <workItem from="1532397458555" duration="18767000" />
+      <workItem from="1532424819102" duration="3105000" />
+      <workItem from="1532438776907" duration="78717000" />
+      <workItem from="1532736432209" duration="50343000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="342158000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="16" sideWeight="0.50305253" side_tool="true" weight="0.2974359" />
+      <window_info anchor="right" id="Maven Projects" order="9" visible="true" weight="0.24297924" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32956383" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.4983845" weight="0.3794872" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32868218" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="13" sideWeight="0.4969475" visible="true" weight="0.29128206" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41128206" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32868218" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49757674" weight="0.38564104" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4981203" visible="true" weight="0.24175824" />
+      <window_info anchor="right" id="Bean Validation" order="8" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32615384" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="5" sideWeight="0.5018797" side_tool="true" weight="0.21062271" />
+      <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.42403176" />
+      <window_info anchor="bottom" id="JRebel Executor" order="14" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="JRebel" order="6" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="JRebel Console" order="15" sideWeight="0.5024233" side_tool="true" weight="0.6676971" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="23" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/shared/user-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-291" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="49" column="12" lean-forward="true" selection-start-line="48" selection-end-line="52" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="57" column="19" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/web/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log-server/src/main/java/com/qk/logserver/rabbit/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitor-service/src/main/java/com/qk/monitorservice/MonitorServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/shared/gateway-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/shared/uaa-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/shared/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/cn/jpush/api/jpush-client/3.3.7/jpush-client-3.3.7.jar!/cn/jpush/api/push/model/notification/PlatformNotification.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/exception/ErrorCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/cn/jpush/api/jiguang-common/1.1.1/jiguang-common-1.1.1.jar!/cn/jiguang/common/resp/APIRequestException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/cn/jpush/api/jiguang-common/1.1.1/jiguang-common-1.1.1.jar!/cn/jiguang/common/ClientConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="93" column="46" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
+          <folding>
+            <element signature="e#5253#5254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1131">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/web/SysController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1566">
+          <caret line="58" column="61" lean-forward="true" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitor-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/GinkgoServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2187">
+          <caret line="90" column="20" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/qk/gatewayservice/filter/ElapsedGatewayFilterFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/web/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uaa-ginkgoapp-server/src/main/java/com/qk/uaaginkgoappserver/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="38" column="52" lean-forward="true" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uaa-ginkgoapp-server/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/shared/uaa-ginkgoapp-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uaa-ginkgoapp-server/src/main/java/com/qk/uaaginkgoappserver/config/UserServiceDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="31" column="15" lean-forward="true" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/constant/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/gateway-service.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-326">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.6.RELEASE/spring-security-web-5.0.6.RELEASE-sources.jar!/org/springframework/security/web/access/AccessDeniedHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/config/GlobalMethodSecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/config/JwtConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/config/MerryyouJwtTokenEnhancer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="13" column="64" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/config/MyM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/dto/RespDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="29" column="5" selection-start-line="27" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/handler/CustomAccessDeniedHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/config/ResourceServerConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/exception/CommonException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-149">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/exception/MessageCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/qk/gatewayservice/filter/TokenFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/handler/CommonExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway-service/src/main/java/com/qk/gatewayservice/filter/GinkgoGatewayFilterFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-279">
+          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/common/exception/AuthExceptionEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="32" column="61" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/config/JwtConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/config/ResourceServerConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="28" column="78" selection-start-line="26" selection-start-column="36" selection-end-line="29" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/qk/userservice/config/GlobalMethodSecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uaa-ginkgoapp-server/src/main/java/com/qk/uaaginkgoappserver/config/OAuth2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/dto/LoginDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-56">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginkgo-service/src/main/java/com/qk/ginkgoservice/modules/sys/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ginkgo-service</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qk.uaaserver.dao.RoleDao">
+
+
+  <resultMap id="roleResult" type="com.qk.uaaserver.entity.Role">
+    <id column="id" property="id" />
+    <result column="name" property="name" />
+  </resultMap>
+
+  <sql id="roleColumns">
+    a.id AS "id",
+    a.name AS "name"
+  </sql>
+
+  <select id="findAuthoritiesByUser" parameterType="String" resultMap="roleResult">
+    select <include refid="roleColumns" />
+    from role a left join user_role b on b.role_id = a.id
+    where 1=1
+      and b.user_id = #{userId}
+
+  </select>
+</mapper>

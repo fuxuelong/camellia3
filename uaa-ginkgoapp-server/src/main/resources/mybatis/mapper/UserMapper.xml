@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qk.uaaginkgoappserver.dao.UserDao">
+  <resultMap type="com.qk.uaaginkgoappserver.entity.User" id="BaseResultMap">
+    <id property="id" column="id"/>
+    <result property="username" column="username"/>
+    <result property="password" column="password"/>
+  </resultMap>
+
+  <sql id="userColumns">
+    a.id AS "id",
+    a.login_name AS "username",
+    a.password AS "password"
+  </sql>
+
+  <select id="findByUsername" parameterType="String" resultMap="BaseResultMap">
+     SELECT <include refid="userColumns" /> FROM sys_user a
+        WHERE a.login_name=#{username}
+  </select>
+</mapper>

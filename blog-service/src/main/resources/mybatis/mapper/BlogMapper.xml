@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qk.blogservice.dao.BlogDao">
+
+  <resultMap type="com.qk.blogservice.entity.Blog" id="BaseResultMap">
+    <id property="id" column="id"/>
+    <result property="username" column="username"/>
+    <result property="subject" column="suject"/>
+  </resultMap>
+
+  <sql id="blogColumns">
+    a.id AS "id",
+    a.username AS "username",
+    a.suject AS "subject",
+    a.title AS "title"
+  </sql>
+
+  <select id="get" parameterType="Long" resultMap="BaseResultMap">
+     SELECT a.* FROM blog a
+        WHERE a.id=#{id}
+  </select>
+
+
+  <select id="findByUsername" parameterType="String" resultMap="BaseResultMap">
+     SELECT a.* FROM blog a
+     WHERE a.username=#{username}
+  </select>
+
+  <insert id= "save">
+    insert into blog(username,suject,title) values (#{username},#{subject},#{title})
+  </insert>
+
+</mapper>
