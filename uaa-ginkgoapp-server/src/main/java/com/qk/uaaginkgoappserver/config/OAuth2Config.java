@@ -29,9 +29,10 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
             .secret("{noop}qkxs@6469")
             .scopes("service")
                 .authorizedGrantTypes("implicit", "refresh_token", "password", "authorization_code")
-            //有效期为半小时
-            .accessTokenValiditySeconds(50)
-            .refreshTokenValiditySeconds(30);
+            //有效期为一小时
+            .accessTokenValiditySeconds(60*60)
+            //有效期为十五天
+            .refreshTokenValiditySeconds(60*60*24*15);
     }
 
     @Autowired

@@ -22,30 +22,12 @@ import com.google.common.collect.Lists;
  * @version 2016-12-23
  */
 public class JxstUtils {
-
-
-
-
     /**
      * 获取当前QkBasicJxsinfo
      * 
      * @return 取不到返回 new QkBasicJxsinfo()
      */
     public static QkBasicJxsinfo getCurrentJxs() {
-        /*
-         * Principal principal = UserUtils.getPrincipal(); if (principal!=null){ User user =
-         * UserUtils.get(principal.getId()); if (user != null){ QkBasicJxsinfo jxs =
-         * (QkBasicJxsinfo)CacheUtils.get(JXS_CACHE, JXS_CACHE_CODE_ + user.getOffice().getCode());
-         * if(jxs==null){ List<QkBasicJxsinfo> jsxInfoList=qkBasicJxsinfoService.findList(new
-         * QkBasicJxsinfo(null,user.getOffice().getCode(),"2"));//经销商Info的ID
-         * jxs=(jsxInfoList.size()==0?null:jsxInfoList.get(0)); if(jxs!=null){
-         * jxs=(jxs.getParent()==null?jxs:qkBasicJxsinfoService.get(jxs.getParent().getId()));//
-         * 若登录用户为团队账号，则返回其经销商信息；否则返回登录经销商信息 CacheUtils.put(JXS_CACHE, JXS_CACHE_CODE_ +
-         * user.getOffice().getCode()); } return jxs; } } } // 如果没有登录，则返回实例化空的QkBasicJxsinfo对象。
-         */ return UserUtils.getCurrentJxs();
+        return UserUtils.getCurrentJxs();
     }
-
-
-
-
 }

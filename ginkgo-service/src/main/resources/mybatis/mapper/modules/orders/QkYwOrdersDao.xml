@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qk.ginkgoservice.modules.orders.dao.QkYwOrdersDao">
+    
+	<sql id="qkYwOrdersColumns">
+		a.id AS "id",
+		a.ddh AS "ddh",
+		a.ywms AS "ywms",
+		a.isjj AS "isjj",
+		a.category AS "category",
+		a.bscid AS "bsc.id",
+		a.jxsid AS "jxs.id",
+		a.cxh AS "cx.id",
+		a.ys AS "ys.id",
+		a.cccxh AS "cccxh",
+		a.cltype AS "cltype",  
+		a.sl AS "sl",
+		a.dpcost AS "dpcost",
+		a.dpprice AS "dpprice", 
+		a.cccost AS "cccost",
+		a.ccprice AS "ccprice",
+		a.xpcost AS "xpcost",
+		a.xpprice AS "xpprice",
+		a.gzcost AS "gzcost",
+		a.gzprice AS "gzprice",
+		a.hgzcxhid AS "hgzcxh",
+		a.isgz AS "isgz",
+		a.gzfs AS "gzfs",
+		a.dyyzx AS "dyyzx",
+		a.sdck AS "sdck.id",
+		a.jcrid AS "jcr.id",
+		a.yqsddate AS "yqsddate",
+		a.qtscyq AS "qtscyq",
+		a.fplb AS "fplb",
+		a.xgcs AS "xgcs",
+		a.djzt AS "djzt",
+		a.bb AS "bb",
+		a.hth AS "hth",
+		a.shuser AS "shuser.id",
+		a.shdate AS "shdate",
+		a.shremark AS "shremark",
+		a.spuser AS "spuser.id", 
+		a.spdate AS "spdate",
+		a.spremark AS "spremark",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag",
+		a.hgzcxms AS "hgzcxms", 
+		a.hgzqtsm AS "hgzqtsm", 
+		a.gzcid AS "gzc.id",
+		a.xjzpzms AS "xjzpzms",
+		a.gzms AS "gzms",
+		a.isggfdj AS "isggfdj", 
+		a.shareTruckId AS "qkYwTrucks.id",
+		a.isgzh AS "isgzh",
+		a.gzhremark AS "gzhremark",
+		a.dcNum AS "dcNum", 
+		a.rwjxsid AS "rwjxs.id",		
+		a.gz_cltype AS "gzCltype",
+		a.dpcxms AS "dpcxms",
+		u.name AS "createBy.name", 	
+		shu.name AS "shuser.name",
+		spu.name AS "spuser.name",
+		s.stockname AS "sdck.stockname",
+		cx.dpcxh AS "cx.dpcxh",
+		cx.bb AS "cx.bb",
+		cx.pp AS "cx.pp.id",
+		cx.price AS "cx.price",
+		cx.active AS "cx.active",
+		(SELECT MAX(cast(bb as decimal)) FROM qk_basic_cxb cx_temp WHERE cx_temp.dpcxh=cx.dpcxh) AS "cx.maxBb",  
+		ys.ysname AS "ys.ysname",
+		f.id AS "cx.qkBasicFdj.id",
+		f.cj AS "cx.qkBasicFdj.cj",
+		f.xh AS "cx.qkBasicFdj.xh",   
+		gzc.name AS "gzc.name",
+		(select count(1) from qk_yw_ordercancel oc where oc.ddh=a.id and oc.djzt between 5 and 25) AS "ocSize", 
+		(select count(1) from qk_yw_ordermodify om where om.ddh=a.id and om.djzt between 5 and 30) AS "omSize",
+		(select count(1) from qk_yw_trucklife tl where tl.ddid=a.id and tl.zcrk is not null) AS "rkSize",
+		(select count(1) from qk_yw_trucklife tl where tl.ddid=a.id and tl.pc is not null) AS "pcSize",
+		(select count(1) from qk_yw_salesbill xsd where xsd.ddh=a.id) AS "xsdSize", 
+		(select count(1) from qk_yw_ywmsxg ywmsxg 
+		JOIN qk_yw_trucks tt ON tt.id = ywmsxg.truckid where tt.ddid=a.id and ywmsxg.djzt between 5 and 15) AS "ywmsxgSize" ,
+		jcr.lxr AS "jcr.lxr" , 
+		s.stockaddress AS "sdck.stockaddress",
+		jcr.idcard AS "jcr.idcard",
+		jcr.lxrdh AS "jcr.lxrdh",
+		jcr.id AS "jcr.id",
+		bsc.name AS "bsc.name",
+		bsc.code AS "bsc.code",
+		j.name AS "jxs.name",
+		j.jxscode AS "jxs.jxscode", 
+		j.jxsjc AS "jxs.jxsjc", 
+		rwj.name AS "rwjxs.name",
+		rwj.jxscode AS "rwjxs.jxscode", 
+		rwj.id AS "rwjxs.id",
+		tl.id AS "qkYwTrucks.tl.id",
+		a.dbid AS "qkYwDb.id",
+		a.cbddid AS "cbdd.id",
+		a.zrid AS "ddzr.id", 
+		cbdd.ddh AS "cbdd.ddh",  
+		p1.name AS "cx.pp.name",  
+		(select sum(oc1.sl) from qk_yw_ordercancel oc1 where oc1.ddh=a.id and oc1.djzt = 35 group by oc1.ddh) AS "cancelNum",
+		tjko.HXZT AS "hxzt",
+		area.id AS "area",
+		gzc.id AS "gzc.id",
+		a.dyyzxejd AS "dyyzxejd",
+		(select sum(sl) from qk_yw_orders orders where orders.cbddid = a.id and orders.djzt > 0 and orders.category = 7) AS "cbppCount"
+	</sql>
+	
+	
+	<sql id="qkYwOrdersJoins">
+	LEFT JOIN sys_user u ON u.id = a.create_by  
+	LEFT JOIN sys_user shu ON shu.id = a.shuser
+	LEFT JOIN sys_user spu ON spu.id = a.spuser
+	LEFT JOIN qk_basic_stock s ON s.id=a.sdck	
+	LEFT JOIN qk_basic_cxb cx ON cx.id=a.cxh
+	LEFT JOIN qk_basic_pp p1 ON p1.id = cx.pp
+	LEFT JOIN sys_office o ON o.id = u.office_id
+	LEFT JOIN sys_office bsc ON bsc.id = a.bscid
+	LEFT JOIN qk_basic_jxsinfo j ON j.id = a.jxsid
+	LEFT JOIN qk_basic_ys ys ON ys.id = a.ys 
+	LEFT JOIN qk_basic_fdj f ON f.id = cx.fdjid
+	LEFT JOIN qk_basic_gzcinfo gzc ON gzc.id = a.gzcid
+	LEFT JOIN qk_basic_stocklxr jcr ON jcr.id = a.jcrid 
+	LEFT JOIN qk_yw_trucks t ON t.id = a.shareTruckId
+	LEFT JOIN qk_yw_trucklife tl ON tl.truckid=t.id
+	LEFT JOIN qk_yw_orders cbdd ON cbdd.id=a.cbddid
+	LEFT JOIN qk_basic_jxsinfo rwj ON rwj.id = a.rwjxsid
+	LEFT JOIN sys_area area ON bsc.area_id = area.id 
+	LEFT JOIN bmis_temp.t_jk_orders tjko ON tjko.DDID = a.ddh
+	</sql>
+    <sql id="qkYwOrdersJoinsSimple">
+	LEFT JOIN qk_basic_jxsinfo j ON j.id = a.rwjxsid
+	LEFT JOIN sys_dict dicty ON a.ywms = dicty.value AND dicty.type = 'ywms'
+	LEFT JOIN sys_dict dictc ON a.category = dictc.value AND dictc.type = 'ddcategory'
+	LEFT JOIN sys_dict dictd ON a.category = dictd.value AND dictd.type = 'djzt_orders'
+	LEFT JOIN qk_basic_ys ys ON ys.id = a.ys
+	LEFT JOIN sys_user u ON u.id = a.create_by
+	LEFT JOIN sys_office o ON o.id = u.office_id
+	</sql>
+    
+    
+	<select id="get" resultType="QkYwOrders"> 
+		SELECT 
+			<include refid="qkYwOrdersColumns"/>
+		FROM qk_yw_orders a
+		<include refid="qkYwOrdersJoins"/>
+		WHERE a.id = #{id} 
+	</select>
+	
+	<select id="getByDdh" resultType="QkYwOrders" >
+		SELECT 
+			<include refid="qkYwOrdersColumns"/>
+		FROM qk_yw_orders a
+		<include refid="qkYwOrdersJoins"/>
+		WHERE a.del_flag = #{DEL_FLAG_NORMAL} 
+			<if test="ddh != null and ddh != ''">
+				AND a.ddh = #{ddh}
+			</if>
+			<if test="sqlStr !=null and sqlStr != ''">
+				${sqlStr} 
+			</if>
+	</select>	
+	
+	<select id="findList" resultType="QkYwOrders"> 
+		SELECT 
+			<include refid="qkYwOrdersColumns"/>
+		FROM qk_yw_orders a
+		<include refid="qkYwOrdersJoins"/> 
+		<where> 
+				AND a.del_flag = #{DEL_FLAG_NORMAL}  
+				<if test="id != null and id != ''"> 
+				AND a.id = #{id}
+			</if>
+			<if test="ddh != null and ddh != ''">
+				AND a.ddh LIKE 
+					<if test="dbName == 'oracle'">'%'||#{ddh}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{ddh}+'%'</if>
+					<!-- 避免全表查询 -->
+					<!-- <if test="dbName == 'mysql'">concat('%',#{ddh},'%')</if> -->
+					<if test="dbName == 'mysql'">concat(#{ddh},'%')</if>
+			</if>
+			<if test="ywms != null and ywms != ''">
+				AND a.ywms = #{ywms}
+			</if>
+			<if test="jxs != null and jxs.jxscode != null and jxs.jxscode != ''">
+				AND j.jxscode LIKE
+					<if test="dbName == 'oracle'">'%'||#{jxs.jxscode}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{jxs.jxscode}+'%'</if>
+					<!-- 避免全表查询 -->
+					<!-- <if test="dbName == 'mysql'">concat('%',#{ddh},'%')</if> -->
+					<if test="dbName == 'mysql'">concat(#{jxs.jxscode},'%')</if>
+			</if>
+			<if test="category != null and category != ''">
+				AND a.category = #{category}
+			</if>
+			<if test="djzt != null and djzt != ''">
+				AND a.djzt = #{djzt}
+			</if>
+			<if test="sqlStr !=null and sqlStr != ''">
+				${sqlStr} 
+			</if>
+			<!-- 数据范围过滤 -->
+		${sqlMap.dsf}
+		</where>
+		ORDER BY a.ddh DESC
+	</select>
+	<select id="findOrdersSimpleInfoList" resultType="Map">
+		SELECT
+			a.id AS "id",
+			a.ddh AS "ddh",
+			j.jxscode AS "jxscode",
+			dicty.label AS "ywms",
+			dictc.label AS "ddlb",
+			a.cccxh AS "cccxh",
+			ys.ysname AS "ys",
+			CAST(a.sl AS CHAR ) AS "sl",
+			CAST(a.dpprice AS CHAR ) AS "dpprice",
+			dictc.label AS "djzt"
+		FROM qk_yw_orders a
+			<include refid="qkYwOrdersJoinsSimple"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="ddh != null and ddh != ''">
+				AND a.ddh LIKE concat(#{ddh},'%')
+			</if>
+			<if test="jxs != null and jxs.jxscode != null and jxs.jxscode != ''">
+				AND j.jxscode LIKE concat(#{jxs.jxscode},'%')
+			</if>
+			<if test="ywms != null and ywms != ''">
+				AND a.ywms = #{ywms}
+			</if>
+			${sqlMap.dsf}
+		</where>
+		ORDER BY a.ddh DESC
+	</select>
+
+
+	
+	<select id="findAllList" resultType="QkYwOrders">
+		SELECT 
+			<include refid="qkYwOrdersColumns"/>
+		FROM qk_yw_orders a
+		<include refid="qkYwOrdersJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.ddh DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+</mapper>

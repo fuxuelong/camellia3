@@ -63,6 +63,8 @@ public class QkBasicJxsinfoService extends CrudService<QkBasicJxsinfoDao, QkBasi
      */
     @Cacheable(unless = "#result==null")
     public QkBasicJxsinfo getJxsByCode(String jxscode) {
+
+        System.out.println("从数据库获取就显示jxs");
         QkBasicJxsinfo qkBasicJxsinfo =
                 qkBasicJxsinfoDao.getJxsByCode(jxscode);
         return qkBasicJxsinfo;

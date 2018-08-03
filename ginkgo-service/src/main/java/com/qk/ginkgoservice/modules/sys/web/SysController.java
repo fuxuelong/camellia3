@@ -39,7 +39,6 @@ public class SysController {
     @PostMapping("/checkToken")
     @ApiOperation(value = "检查token有效性", notes = "访问时在header中携带Authorizition=token")
     public RespDTO checkToken(){
-        System.out.println("=============");
         return new RespDTO(MessageCode.VALID_TOKEN);
     }
     /**
