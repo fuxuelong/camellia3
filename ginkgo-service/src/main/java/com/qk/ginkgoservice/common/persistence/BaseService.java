@@ -92,37 +92,37 @@ public abstract class BaseService {
             // 如果没有全部数据权限，并设置了用户别名，则当前权限为本人；如果未设置别名，当前无权限为已植入权限
             // 20170930暂不使用
             // 20171026 测试权限出现问题
-            if (!isDataScopeAll) {
-
-                if (StringUtils.isNotBlank(userAlias)) {
-                    for (String ua : StringUtils.split(userAlias, ",")) {
-                        // 20171026
-                        if (JxstUtils.getCurrentJxs() != null) {
-                            for (String oa : StringUtils.split(officeAlias, ",")) {
-                                sqlString.append(" or " + "(" + ua + ".id = '" + user.getId()
-                                        + "' and " + oa + ".id = '"
-                                        + JxstUtils.getCurrentJxs().getOfficejxs().getId() + "') ");
-                            }
-
-                        } else {
-                            for (String oa : StringUtils.split(officeAlias, ",")) {
-                                sqlString.append(
-                                        " or " + "(" + ua + ".id = '" + user.getId() + "' and " + oa
-                                                + ".id = '" + user.getOffice().getId() + "') ");
-                            }
-                        }
-                        /* sqlString.append(" or " + ua + ".id = '" + user.getId() + "'"); */
-                    }
-                } else {
-                    for (String oa : StringUtils.split(officeAlias, ",")) {
-                        // sqlString.append(" OR " + oa + ".id = " + user.getOffice().getId());
-                        sqlString.append(" OR " + oa + ".id IS NULL");
-                    }
-                }
-            } else {
-                // 如果包含全部权限，则去掉之前添加的所有条件，并跳出循环。
-                sqlString = new StringBuilder();
-            }
+//            if (!isDataScopeAll) {
+//
+//                if (StringUtils.isNotBlank(userAlias)) {
+//                    for (String ua : StringUtils.split(userAlias, ",")) {
+//                        // 20171026
+//                        if (JxstUtils.getCurrentJxs() != null) {
+//                            for (String oa : StringUtils.split(officeAlias, ",")) {
+//                                sqlString.append(" or " + "(" + ua + ".id = '" + user.getId()
+//                                        + "' and " + oa + ".id = '"
+//                                        + JxstUtils.getCurrentJxs().getOfficejxs().getId() + "') ");
+//                            }
+//
+//                        } else {
+//                            for (String oa : StringUtils.split(officeAlias, ",")) {
+//                                sqlString.append(
+//                                        " or " + "(" + ua + ".id = '" + user.getId() + "' and " + oa
+//                                                + ".id = '" + user.getOffice().getId() + "') ");
+//                            }
+//                        }
+//                        /* sqlString.append(" or " + ua + ".id = '" + user.getId() + "'"); */
+//                    }
+//                } else {
+//                    for (String oa : StringUtils.split(officeAlias, ",")) {
+//                        // sqlString.append(" OR " + oa + ".id = " + user.getOffice().getId());
+//                        sqlString.append(" OR " + oa + ".id IS NULL");
+//                    }
+//                }
+//            } else {
+//                // 如果包含全部权限，则去掉之前添加的所有条件，并跳出循环。
+//                sqlString = new StringBuilder();
+//            }
 
         }
         if (StringUtils.isNotBlank(sqlString.toString())) {

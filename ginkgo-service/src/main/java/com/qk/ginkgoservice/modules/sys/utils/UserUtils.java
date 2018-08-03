@@ -139,7 +139,6 @@ public  class UserUtils {
     /**获取当前经销商*/
     public static QkBasicJxsinfo getCurrentJxs() {
         String userName = getCurrentPrinciple();
-        System.out.println(userService.getUserByUserName(userName).getOffice().getCode()+"+++++++");
         if (userName != null) {
             User user = userService.getUserByUserName(userName);
             if (user != null) {

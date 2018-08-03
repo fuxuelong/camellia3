@@ -60,9 +60,6 @@ public class IdGen {
     }
 
     public static void main(String[] args) {
-        System.out.println(IdGen.uuid());
-        System.out.println(IdGen.uuid().length());
-        System.out.println(new IdGen().getNextId());
         for (int i = 0; i < 1000; i++) {
             System.out.println(IdGen.randomLong() + "  " + IdGen.randomBase62(5));
         }

@@ -28,7 +28,6 @@ public class QkBasicStockController {
     QkBasicStockDao qkBasicStockDao;
     @PostMapping(value = "/getByStockCode")
     public String getByStockCode(String stockcode){
-        System.out.println("++++获取仓库名称+++++");
         return  qkBasicStockService.getByStockCode(stockcode).get(0).getStockname();
     }
     @PostMapping(value = "findStockList")
@@ -51,11 +50,6 @@ public class QkBasicStockController {
     }
     @PostMapping(value = "test")
     public String test(){
-        System.out.println(UserUtils.getCurrentPrinciple());
-        System.out.println(UserUtils.getCurrentToken());
-        System.out.println(UserUtils.getCurrentAuthorities());
-        System.out.println(SecurityContextHolder.getContext().getAuthentication());
-        System.out.println(SecurityContextHolder.getContext());
 
         return "success";
     }

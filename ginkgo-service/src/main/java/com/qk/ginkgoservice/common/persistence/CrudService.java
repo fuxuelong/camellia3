@@ -79,11 +79,9 @@ public abstract class CrudService<D extends CrudDao<T>, T extends DataEntity<T>>
     @Transactional(readOnly = false)
     public void save(T entity) {
         if (entity.getIsNewRecord()) {
-            System.out.println("is new record");
             entity.preInsert();
             dao.insert(entity);
         } else {
-            System.out.println("isn't new record");
             entity.preUpdate();
             dao.update(entity);
         }

@@ -95,7 +95,6 @@ public class UserService extends CrudService<UserDao,User> {
                 + (Integer.toUnsignedLong(jwt.getExpires_in())*1000);
         Date date = new Date();
         date.setTime(validMillis);
-        System.out.println(date);
 
         redisTemplate.opsForValue().set(Constant.GINKGO_JWT_REDISTEMP_PREFIX + username , jwt,Constant.JWT_CACHE_LIVE_TIME,TimeUnit.SECONDS);
         return loginDTO;
