@@ -24,7 +24,8 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
     private ObjectMapper objectMapper;
 
     @Override
-    public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException, ServletException, IOException {
+    public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException)
+            throws  ServletException, IOException {
         response.setContentType("application/json;charset=UTF-8");
         Map map = new HashMap();
         map.put("code", -6);

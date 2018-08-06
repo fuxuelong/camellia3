@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 经销商订单提报Controller
+ * 订单Controller
  * 
  * @author QkEip
  * @version 2016-12-23

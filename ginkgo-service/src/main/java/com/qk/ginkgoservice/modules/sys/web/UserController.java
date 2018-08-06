@@ -72,8 +72,14 @@ public class UserController {
     @SysLogger("login")
     public LoginDTO login(@RequestParam String userName , @RequestParam String password){
         //参数判读省略
-//        if (userName)
         return   userService.login(userName,password);
+    }
+    @ApiOperation(value = "刷新token", notes = "")
+    @PostMapping("/refreshToken")
+    @SysLogger("refreshToken")
+    public LoginDTO refreshToken(@RequestParam String userName , @RequestParam String refresh_token){
+        //参数判读省略
+        return   userService.refreshToken(userName,refresh_token);
     }
 
 
@@ -89,5 +95,4 @@ public class UserController {
         return RespDTO.onSuc(user);
     }
 
-//
 }

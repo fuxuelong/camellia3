@@ -11,8 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface AuthServiceClient {
     @PostMapping(value = "/oauth/token")
     JWT getToken(
-            @RequestHeader(value = "Authorization") String authorization, @RequestParam("grant_type") String type,
+            @RequestHeader(value = "Authorization") String authorization,
+            @RequestParam("grant_type") String type,
             @RequestParam("username") String username,
             @RequestParam("password") String password);
-
+    /**
+     * 刷新token
+     */
+    @PostMapping(value = "/oauth/token")
+    JWT refreshToken( @RequestHeader(value = "Authorization") String authorization,
+                      @RequestParam("grant_type") String type,
+                      @RequestParam("refresh_token") String refresh_token);
 }

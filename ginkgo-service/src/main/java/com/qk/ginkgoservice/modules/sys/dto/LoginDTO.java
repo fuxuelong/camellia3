@@ -4,8 +4,11 @@ package com.qk.ginkgoservice.modules.sys.dto;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.qk.ginkgoservice.common.exception.MessageCode;
 import com.qk.ginkgoservice.modules.sys.entity.User;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.regex.Pattern;
 
 /**
  * @author fuxuelong
@@ -16,6 +19,7 @@ public class LoginDTO<T> implements Serializable {
     private String username;
     private String token;
     private String message;
+    private Date tokenValid;
     private MessageCode messageCode;
 
     public LoginDTO(MessageCode messageCode){
@@ -61,5 +65,12 @@ public class LoginDTO<T> implements Serializable {
     public void setMessageCode(MessageCode messageCode) {
         this.code = messageCode.getCode();
         this.message = messageCode.getMsg();
+    }
+    public Date getTokenValid() {
+        return tokenValid;
+    }
+
+    public void setTokenValid(Date tokenValid) {
+        this.tokenValid = tokenValid;
     }
 }

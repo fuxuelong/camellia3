@@ -17,6 +17,7 @@
 		<typeAlias type="com.qk.ginkgoservice.modules.sys.entity.Menu" alias="Menu"/>
 		<typeAlias type="com.qk.ginkgoservice.modules.sys.entity.Role" alias="Role"/>
 		<typeAlias type="com.qk.ginkgoservice.modules.orders.entity.QkYwOrders" alias="QkYwOrders"/>
+		<typeAlias type="com.qk.ginkgoservice.modules.orders.entity.QkYwOrdermodify" alias="QkYwOrdermodify"/>
 
 	</typeAliases>
 

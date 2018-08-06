@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qk.ginkgoservice.modules.orders.dao.QkYwOrdermodifyDao">
+    
+	<sql id="qkYwOrdermodifyColumns">
+		a.id AS "id",
+		a.ddh AS "dd.id",
+		a.bscid AS "bsc.idid",
+		a.jxsid AS "jxs.idid",
+		a.diffms AS "diffms",
+		a.xgcs AS "xgcs",
+		a.djzt AS "djzt",
+		a.shuser AS "shuser",
+		a.shdate AS "shdate",
+		a.shremark AS "shremark",
+		a.spuser AS "spuser",
+		a.spdate AS "spdate",
+		a.spremark AS "spremark",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag",
+		a.xpcj AS "xpcj",
+		a.gzcj AS "gzcj",
+		j.jxscode AS "jxs.jxscode",
+		j.name AS "jxs.name",
+		bsc.name AS "bsc.name",	
+		dd.ddh AS "dd.ddh",
+		dd.ywms AS "dd.ywms",
+		dd.isjj AS "dd.isjj",
+		dd.sl AS "dd.sl",
+		dd.cltype AS "dd.cltype",
+		dd.dyyzx AS "dd.dyyzx",
+		dd.dyyzxejd AS "dd.dyyzxejd",
+		dd.category AS "dd.category",
+		dd.cccxh AS "dd.cccxh",
+		u.name AS "updateBy.name",	
+		shu.name AS "shuser.name",
+		spu.name AS "spuser.name",
+		cx.dpcxh AS "dd.cx.dpcxh",
+-- 		tjkom.HXZT AS "hxzt"
+	</sql>
+	
+	<sql id="qkYwOrdermodifyJoins">
+	LEFT JOIN sys_user u ON u.id = a.create_by
+	LEFT JOIN sys_user shu ON shu.id = a.shuser
+	LEFT JOIN sys_user spu ON spu.id = a.spuser
+	LEFT JOIN sys_office o ON o.id = u.office_id 
+	LEFT JOIN qk_yw_orders dd ON dd.id = a.ddh 
+	LEFT JOIN sys_office bsc ON bsc.id = a.bscid
+	LEFT JOIN qk_basic_jxsinfo j ON j.id = a.jxsid
+	LEFT JOIN sys_area area ON bsc.area_id = area.id
+	LEFT JOIN qk_basic_cxb cx ON cx.id=dd.cxh
+-- 	LEFT JOIN bmis_temp.t_jk_orders_modi tjkom ON tjkom.xgid = a.id
+	</sql>
+
+	<select id="get" resultType="QkYwOrdermodify">
+		SELECT 
+			<include refid="qkYwOrdermodifyColumns"/>
+		FROM qk_yw_ordermodify a
+		<include refid="qkYwOrdermodifyJoins"/>
+		WHERE a.id = #{id} AND dd.del_flag = 0  
+	</select>
+	
+	<select id="findList" resultType="QkYwOrdermodify">
+		SELECT 
+			<include refid="qkYwOrdermodifyColumns"/>
+		FROM qk_yw_ordermodify a
+		<include refid="qkYwOrdermodifyJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL} AND dd.del_flag = 0 
+			<if test="dd != null and dd.ddh != null and dd.ddh != ''">
+				AND dd.ddh LIKE 
+					<if test="dbName == 'oracle'">'%'||#{dd.ddh}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{dd.ddh}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{dd.ddh},'%')</if>
+			</if>
+			<if test="bsc != null and bsc.id != null and bsc.id != ''">
+				AND bsc.id = #{bsc.id}
+			</if>
+			
+			
+			<if test="jxs != null and jxs.jxscode != null and jxs.jxscode != ''">
+				AND (j.jxscode = #{jxs.jxscode} OR  
+				j.name LIKE  
+					<if test="dbName == 'oracle'">'%'||#{jxs.jxscode}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{jxs.jxscode}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{jxs.jxscode},'%')</if>)
+			</if>
+			<if test="djzt != null and djzt != ''">
+				AND a.djzt = #{djzt}
+			</if>
+			<if test="beginUpdateDate != null and endUpdateDate != null and beginUpdateDate != '' and endUpdateDate != ''">
+				AND a.update_date BETWEEN #{beginUpdateDate} AND #{endUpdateDate}
+			</if>
+			<if test="beginDjzt != null and endDjzt != null and beginDjzt != '' and endDjzt != ''"> 
+				AND a.djzt BETWEEN #{beginDjzt} AND #{endDjzt}
+			</if>
+			<if test="area_temp != null and area_temp != ''">
+				and area.parent_ids like concat(#{area_temp},'%')
+			
+			</if>
+			<if test="sqlStr !=null and sqlStr != ''">
+				${sqlStr} 
+			</if>
+			<!-- 数据范围过滤 -->
+		${sqlMap.dsf}
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	<select id="findOrdermodifyList" resultType="Map">
+		SELECT
+			dd.ddh AS "dd.ddh",
+			dd.ywms AS "dd.ywms",
+			dd.category AS "dd.category",
+			dd.cccxh AS "dd.cccxh",
+			a.djzt AS "djzt",
+			a.xpcj AS "xpcj",
+			a.gzcj AS "gzcj"
+		FROM qk_yw_ordermodify a
+		<include refid="qkYwOrdermodifyJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL} AND dd.del_flag = 0
+			<if test="dd != null and dd.ddh != null and dd.ddh != ''">
+				AND dd.ddh LIKE
+				<if test="dbName == 'oracle'">'%'||#{dd.ddh}||'%'</if>
+				<if test="dbName == 'mssql'">'%'+#{dd.ddh}+'%'</if>
+				<if test="dbName == 'mysql'">concat('%',#{dd.ddh},'%')</if>
+			</if>
+			<if test="bsc != null and bsc.id != null and bsc.id != ''">
+				AND bsc.id = #{bsc.id}
+			</if>
+			<if test="jxs != null and jxs.jxscode != null and jxs.jxscode != ''">
+				AND (j.jxscode = #{jxs.jxscode} OR
+				j.name LIKE
+				<if test="dbName == 'oracle'">'%'||#{jxs.jxscode}||'%'</if>
+				<if test="dbName == 'mssql'">'%'+#{jxs.jxscode}+'%'</if>
+				<if test="dbName == 'mysql'">concat('%',#{jxs.jxscode},'%')</if>)
+			</if>
+			<if test="djzt != null and djzt != ''">
+				AND a.djzt = #{djzt}
+			</if>
+			<if test="beginUpdateDate != null and endUpdateDate != null and beginUpdateDate != '' and endUpdateDate != ''">
+				AND a.update_date BETWEEN #{beginUpdateDate} AND #{endUpdateDate}
+			</if>
+			<if test="beginDjzt != null and endDjzt != null and beginDjzt != '' and endDjzt != ''">
+				AND a.djzt BETWEEN #{beginDjzt} AND #{endDjzt}
+			</if>
+			<if test="area_temp != null and area_temp != ''">
+				and area.parent_ids like concat(#{area_temp},'%')
+
+			</if>
+			<if test="sqlStr !=null and sqlStr != ''">
+				${sqlStr}
+			</if>
+			<!-- 数据范围过滤 -->
+			${sqlMap.dsf}
+		</where>
+		ORDER BY a.update_date DESC
+	</select>
+
+	<update id="update">
+		UPDATE qk_yw_ordermodify SET 	
+			ddh = #{dd.id},
+			bscid = #{bsc.id},
+			jxsid = #{jxs.id}, 
+			diffms = #{diffms},
+			xgcs = #{xgcs},
+			djzt = #{djzt},
+			shuser = #{shuser.id},
+			shdate = #{shdate},
+			shremark = #{shremark},
+			spuser = #{spuser.id},
+			spdate = #{spdate},
+			spremark = #{spremark},
+			remarks = #{remarks}
+		WHERE id = #{id}
+	</update>
+	<update id="updateDdDjzt">
+		UPDATE qk_yw_ordermodify SET 			 
+			djzt=#{djzt}, 
+			shuser=#{shuser.id},
+			shdate =#{shdate},
+			shremark=#{shremark},
+			spuser=#{spuser.id},
+			spdate=#{spdate},
+			spremark=#{spremark}, 
+			remarks = #{remarks}
+		WHERE id = #{id} 
+	</update>
+	<update id="delete">
+		UPDATE qk_yw_ordermodify SET 
+			del_flag = #{DEL_FLAG_DELETE} 
+		WHERE id = #{id}
+	</update> 	
+</mapper>

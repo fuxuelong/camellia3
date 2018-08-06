@@ -28,6 +28,9 @@ public class QkYwOrdersService extends CrudService<QkYwOrdersDao, QkYwOrders> {
     @Autowired
     private QkYwOrdersDao qkYwOrdersDao;
 
+    /**
+     * 查询订单信息
+     * */
     public List<Map<String,String>> findOrdersSimpleInfoList(QkYwOrders qkYwOrders){
         qkYwOrders.getSqlMap().put("dsf", dataScopeFilter(UserUtils.getUser(), "o", "u"));
         return qkYwOrdersDao.findOrdersSimpleInfoList(qkYwOrders);

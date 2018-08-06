@@ -11,4 +11,9 @@ public class AuthServiceHystrix implements AuthServiceClient{
         System.out.println(authorization+"------"+type+"-------"+username+"------"+password);
         return null;
     }
+
+    @Override
+    public JWT refreshToken(String authorization, String type, String refresh_token) {
+        return null;
+    }
 }
